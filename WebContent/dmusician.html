@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二手抖音音乐人</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/dyin.css">
+
+    <script>
+        var distance = 120;
+        $(function () {
+            var $leftpointer = $('.left-pointer');
+            var $rightpointer = $('.right-pointer');
+            var $marquee = $('.musician-music-marquee');
+            $marquee.css('margin-left',(distance+'px'));
+            $leftpointer.on('click',function () {   //点击左按钮
+                if (distance < 0){
+                    distance += 240;
+                    $marquee.animate({
+                        'margin-left':(distance+'px')
+                    },300);
+                }
+            });
+            $rightpointer.on('click',function () {  //点击右按钮
+                if (distance > -460){
+                    distance -= 240;
+                    $marquee.animate({
+                        'margin-left':(distance+'px')
+                    },300);
+                }
+            });
+            //鼠标移入移出图片动画
+            $('.musician-music').hover(function () {
+                $(this).children('.musician-music-logo').addClass('musician-music-logo-active');    //children()用来找到当前对象的孩子
+                $(this).children('.musician-music-name').addClass('musician-music-name-active');
+            },function () {
+                $(this).children('.musician-music-logo').removeClass('musician-music-logo-active');    //children()用来找到当前对象的孩子
+                $(this).children('.musician-music-name').removeClass('musician-music-name-active');
+            });
+
+            var $video = $('.musician-video');
+            var $start = $('.musician-start');
+            $('.musician-song').on('click',function () {
+                var video = $(this).attr('video');
+                if ($video.attr('src') !== video){  //如果点击的是同一个视频，则不发生任何变化
+
+                    $video.attr('src',video);   //设置标签属性
+                    $(this).css('background','#f1f1f2');   //设置标签样式，将选中的背景变为灰色
+                    $(this).siblings().css('background','#ffffff'); //将其他背景变为白色
+
+                    //点击其他视频默认直接播放
+                    $video.get(0).play();
+                    $start.css('display','none');
+                    $start.attr('play','1');
+                }
+
+
+            });
+
+            //播放
+            var $player = $('.musician-player');
+            $player.on('click',function () {
+                if ($(this).attr('src')==='image/player_close.svg'){
+                    $video.get(0).muted = false;
+                    $(this).attr('src','image/player.svg');
+                }else {
+                    $video.get(0).muted = true;
+                    $(this).attr('src','image/player_close.svg');
+                }
+            });
+
+
+            $start.on('click',function () {
+                var $play = $(this).attr('play');
+                if ($play === '0'){ //0为暂停状态
+                    $video.get(0).play();   //播放
+                    $(this).attr('play','1');
+                    $(this).css('display','none');
+                }
+            })
+            $video.on('click',function () {
+                var $play = $start.attr('play');
+                if ($play === '0'){ //0为暂停状态
+                    $video.get(0).play();   //播放
+                    $start.attr('play','1');
+                    $start.css('display','none');
+                }else {
+                    $video.get(0).pause();   //暂停
+                    $start.attr('play','0');
+                    $start.css('display','inline-block');
+                }
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <div class="musician-header">
+        <img class="musician-logo" src="image/musician-logo.png" width="164">
+        <div class="musician-nav">
+            <div style="color: red">登录</div>
+            <div>国风征集季</div>
+            <div style="border-bottom: red 2px solid">首页</div>
+        </div>
+    </div>
+    <div class="musician-ad">
+        <div class="musician-slogan">你的音乐，世界看见</div>
+        <div class="musician-join">立即入驻</div>
+    </div>
+
+    <div>
+        <div class="musician-listen">让你的音乐在抖音被更多人听见</div>
+        <div class="musician-text">自由上传音乐文件并与更多人分享，丰富你的资料并收获更多关注。</div>
+        <div class="musician-text">随时追踪音乐的数据动态！</div>
+        <div style="text-align: center;margin-top: 20px">
+            <img src="image/joinus.png" width="1000"/>
+        </div>
+        <div style="text-align: center">
+            <div class="musician-join2" style="display: inline-block">立即入驻</div>
+        </div>
+    </div>
+
+    <div class="musician-music-container">
+        <div class="musician-listen">抖音音乐</div>
+        <div class="musician-text">数以亿计用户在等待聆听并分享你的音乐。</div>
+        <div class="musician-music-marquee">
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee1.jpeg"/>
+                <span class="musician-music-name">你笑起来真好看</span>
+            </div>
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee2.jpeg"/>
+                <span class="musician-music-name">野狼disco</span>
+            </div>
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee3.jpeg"/>
+                <span class="musician-music-name">绿色</span>
+            </div>
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee4.jpeg"/>
+                <span class="musician-music-name">小星星</span>
+            </div>
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee5.jpeg"/>
+                <span class="musician-music-name">心如止水</span>
+            </div>
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee6.jpeg"/>
+                <span class="musician-music-name">生僻字</span>
+            </div>
+            <div class="musician-music">
+                <img class="musician-music-logo" width="180" height="180" src="image/marquee7.jpeg"/>
+                <span class="musician-music-name">可不可以</span>
+            </div>
+
+        </div>
+        <img class="left-pointer" src="image/left-pointer.svg"/>
+        <img class="right-pointer" src="image/right-pointer.svg"/>
+
+    </div>
+
+    <div class="musician-people-container">
+        <div class="musician-listen">抖音音乐人</div>
+        <div class="musician-people">
+            <div class="musician-star">
+                <img src="image/musician2.jpg" width="94" height="94"/>
+            </div>
+            <div class="musician-people-name">简弘亦</div>
+        </div>
+        <div class="musician-people">
+            <div class="musician-star">
+                <img src="image/musician3.jpg" width="94" height="94"/>
+            </div>
+            <div class="musician-people-name">徐秉龙</div>
+        </div>
+        <div class="musician-people">
+            <div class="musician-star">
+                <img src="image/musician4.jpg" width="94" height="94"/>
+            </div>
+            <div class="musician-people-name">摩登兄弟</div>
+        </div>
+        <div class="musician-people">
+            <div class="musician-star">
+                <img src="image/musician5.jpg" width="94" height="94"/>
+            </div>
+            <div class="musician-people-name">音阙诗听</div>
+        </div>
+    </div>
+
+    <div class="musician-wrapper">
+        <div class="musician-cloth">
+            <div class="musician-song-container">
+                <div class="musician-song-list">
+                    <div class="musician-song" video = "video/song-video-douyin-1.mp4" style="background: #f1f1f2">
+                        <img src="image/video_logo1.jpeg" height="40">
+                        <div class="musician-singer">
+                            <div style="font-weight: bold">芒种</div>
+                            <div>因阙诗听</div>
+                        </div>
+                    </div>
+                    <div class="musician-song" video = "video/song-video-douyin-5.mp4">
+                        <img src="image/video_logo5.jpeg" height="40">
+                        <div class="musician-singer">
+                            <div style="font-weight: bold">你笑起来真好看</div>
+                            <div>李昕融</div>
+                        </div>
+                    </div>
+                    <div class="musician-song" video = "video/song-video-douyin-8.mp4">
+                        <img src="image/video_logo8.jpeg" height="40">
+                        <div class="musician-singer">
+                            <div style="font-weight: bold">赤伶</div>
+                            <div>执素兮</div>
+                        </div>
+                    </div>
+                    <div class="musician-song" video = "video/song-video-douyin-10.mp4">
+                        <img src="image/video_logo10.jpeg" height="40">
+                        <div class="musician-singer">
+                            <div style="font-weight: bold">想对你说</div>
+                            <div>小潘潘（潘柚彤）</div>
+                        </div>
+                    </div>
+                </div>
+                <video class="musician-video" loop muted src="video/song-video-douyin-1.mp4" ></video>
+                <img class="musician-player" src="image/player_close.svg"/>
+                <img play="0" class="musician-start" src="image/start.svg"/>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

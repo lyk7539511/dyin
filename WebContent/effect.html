@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二手特效师</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="css/dyin.css">
+
+    <script>
+        $(function () {
+            var $video = $('.art-video');
+            var $container = $('.art-container');
+            var $layer = $('.art-layer');
+            var $content = $('.art-content');
+
+            $container.hover(function () {  /* 鼠标移入 */
+                $video.get(0).play();   /* 视频播放 */
+                $layer.css('display','none');   /* 图片隐藏 */
+                $content.css('display','none'); /* 文字隐藏 */
+            },function () { /* 鼠标移出 */
+                $video.get(0).pause();   /* 视频暂停 */
+                $layer.css('display','block');   /* 图片出现 */
+                $content.css('display','block'); /* 文字出现 */
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div class="art-header">
+        <img class="art-logo" src="image/logo.png">
+    </div>
+    <div>
+        <img class="art-banner" src="image/banner.e32090f0.png">
+        <img class="art-banner" src="image/effect_star.f8e3659b.png">
+    </div>
+    <div style="min-width: 1200px">
+        <div class="art-container">
+            <video class="art-video" src="video/video_top.fd700cfc.mp4" muted loop></video>
+            <img class="art-layer" src="image/video_top.d3a796e1.png"/>
+            <div class="art-content">
+                <div style="font-size: 40px">熊爸爸</div>
+                <div style="font-size: 20px; margin-top: 10px">超过3亿浏览</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
