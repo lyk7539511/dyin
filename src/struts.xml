@@ -5,8 +5,10 @@
 
 <struts>
 	<constant name="struts.multipart.maxSize" value="1048576000" />
-	<package name="" extends="struts-default">
-		
+	<package name="dyin" extends="struts-default">
+		<action name="user_login" 
+				class="com.dyin.action.UserAction" 
+				method="login"></action>
 		
 	</package>
 

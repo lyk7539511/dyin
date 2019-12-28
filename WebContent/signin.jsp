@@ -38,13 +38,13 @@
 											<fieldset>
 												<label class="block clearfix"> <span
 													class="block input-icon input-icon-right"> <input
-														id="userId" name="user.username" type="text"
+														id="userId" name="bean.username" type="text"
 														class="form-control" placeholder="请输入账号" /> <i
 														class="icon-user"></i>
 												</span>
 												</label> <label class="block clearfix"> <span
 													class="block input-icon input-icon-right"> <input
-														id="userPw" name="user.password" type="password"
+														id="userPw" name="bean.password" type="password"
 														class="form-control" placeholder="请输入密码" /> <i
 														class="icon-lock"></i>
 												</span>
