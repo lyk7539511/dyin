@@ -51,7 +51,7 @@
 												</label>
 
 												<div class="clearfix">
-													<font color="red">错误信息</font>
+													<font color="red">${msgString}</font>
 													<button type="submit"
 														class="width-35 pull-right btn btn-sm btn-primary">
 														<i class="icon-key"></i> 登录

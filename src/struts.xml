@@ -6,9 +6,11 @@
 <struts>
 	<constant name="struts.multipart.maxSize" value="1048576000" />
 	<package name="dyin" extends="struts-default">
-		<action name="user_*" 
-				class="com.dyin.action.UserAction" 
-				method="{1}"></action>
+		<action name="user_*" class="com.dyin.action.UserAction" method="{1}">
+				<result name="succ">main.html</result>
+				<result name="fail">signin.jsp</result>
+				
+		</action>
 		
 	</package>
 
