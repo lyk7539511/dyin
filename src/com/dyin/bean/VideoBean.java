@@ -14,6 +14,6 @@ public class VideoBean {
 	}
 	public void setVideo(String video) {
 		this.video = video;
-	}	
+	}
 
 }

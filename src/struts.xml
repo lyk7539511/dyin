@@ -7,9 +7,13 @@
 	<constant name="struts.multipart.maxSize" value="1048576000" />
 	<package name="dyin" extends="struts-default">
 		<action name="user_*" class="com.dyin.action.UserAction" method="{1}">
-				<result name="succ">main.html</result>
-				<result name="fail">signin.jsp</result>
+			<result name="succ">main.html</result>
+			<result name="fail">signin.jsp</result>
 				
+		</action>
+		<action name="video_*" class="com.dyin.action.VideoAction" method="{1}">
+			<result name="succ">/view/dyin/video/list.jsp</result>
+			<result name="fail"></result>
 		</action>
 		
 	</package>
