@@ -21,10 +21,10 @@ public class DBConnection {
 	
 	public  Connection getConnection(){
 		//String url="jdbc:mysql://218.201.134.109:3306/mas?useUnicode=true&characterEncoding=gbk&autoReconnect=true&failOverReadOnly=false";
-		String url="jdbc:mysql://127.0.0.1:3306/dinner?useUnicode=true&characterEncoding=gbk&autoReconnect=true&failOverReadOnly=false";
+		String url="jdbc:mysql://127.0.0.1:3306/dyin?useUnicode=true&characterEncoding=gbk&autoReconnect=true&failOverReadOnly=false";
 		try{
             //return DriverManager.getConnection("proxool.Develop");
-			return DriverManager.getConnection(url, "root", "");
+			return DriverManager.getConnection(url, "root", "123456");
 			
         }catch(Exception ex){
             ex.printStackTrace();
