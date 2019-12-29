@@ -8,7 +8,7 @@ import com.dyin.util.FileUtil;
 public class VideoAction {
 	private VideoDAO dao = new VideoDAO();
 	private File file;
-	private String fileFileName;
+	private String fileFileName;	//变量名不可改
 	
 	public File getFile() {
 		return file;

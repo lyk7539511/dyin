@@ -34,6 +34,8 @@ public class UserAction {
 		this.msgString = msgString;
 	}
 	
+	
+	// localhost:8080/dyin/user_login
 	public String login() {
 		//用户有可能不输入用户名密码直接登录
 		if (StringUtils.isBlank(bean.getUsername())) {	//isBlank()校验三种状态：null(不存在) 空   空格
