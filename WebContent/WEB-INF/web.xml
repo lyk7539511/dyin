@@ -16,7 +16,7 @@
 	</filter-mapping>
 
 	<welcome-file-list>
-		<welcome-file>signin.jsp</welcome-file>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index</welcome-file>	<!-- 此处的index就是IndexAction中的index()方法 -->
+		<!-- <welcome-file>dindex.html</welcome-file> -->
 	</welcome-file-list>
 </web-app>
