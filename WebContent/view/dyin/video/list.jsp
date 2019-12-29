@@ -30,6 +30,7 @@
 				if (loading) {
 					layer.close(loading);	//关闭转圈
 				}
+				window.location.reload();	//上传成功后刷新
 				alert('上传成功');
 			},
 			error: function () {		//上传失败
@@ -55,5 +56,7 @@
 			<input id="upload-video" type="button" class="btn btn-success" value="上传视频" />
 		</div>
 	</form>
+	
+	<video muted loop autoplay src="${video }"></video>
 </body>
 </html>

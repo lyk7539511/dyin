@@ -24,7 +24,7 @@ public class VideoDAO extends BaseDAO<VideoBean> {
 		if (getVideo() == null) {
 			sqlString = "insert into tbl_video(video) value(?)";	//数据库中不存在视频路径，执行插入
 		}else {
-			sqlString = "upload tbl_video set video=?";		//数据库中存在视频路径，更新视频
+			sqlString = "update tbl_video set video=?";		//数据库中存在视频路径，更新视频
 		}
 		updateBySql(sqlString, new IParamBinding() {
 
