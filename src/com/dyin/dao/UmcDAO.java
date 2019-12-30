@@ -9,7 +9,7 @@ import com.common.dbaccessframework.core.IParamBinding;
 import com.common.dbaccessframework.mapping.MysqlReflectMapping;
 import com.dyin.bean.UmcBean;
 
-public class UmcDao extends BaseDAO<UmcBean> {
+public class UmcDAO extends BaseDAO<UmcBean> {
 	
 	//查询
 	public List<UmcBean> getUmcList() {
@@ -19,7 +19,7 @@ public class UmcDao extends BaseDAO<UmcBean> {
 	}
 	//增加你的音乐
 	public void addUmc(UmcBean bean) {
-		String sqlString = "insert into tbl_umc(title,auther,image,video) vlaue(?,?,?,?)";
+		String sqlString = "insert into tbl_umc(title,author,image,video) value(?,?,?,?)";
 		updateBySql(sqlString,new IParamBinding() {
 			
 			@Override
@@ -35,7 +35,7 @@ public class UmcDao extends BaseDAO<UmcBean> {
 	}
 	//删除你的音乐,按主键
 	public void delUmc(int id) {
-		String sqlString = "delete from tbl_umc while id=?";
+		String sqlString = "delete from tbl_umc where id=?";
 		updateBySql(sqlString,new IParamBinding() {
 			
 			@Override

@@ -10,9 +10,15 @@
 		<!-- 访问http://localhost:8080/dyin/即可打开主页 -->
 		<default-action-ref name="index" />
 		<action name="index">
-			<result name="success" type="redirectAction">index.action</result>
+			<result name="success" type="redirectAction">index_index.action</result>
 		</action>
-		
+				
+		<action name="index_*" class="com.dyin.action.IndexAction"
+			method="{1}">
+			<result name="dindex">dindex.jsp</result>
+			<result name="dmusician">dmusician.jsp</result>
+			<result name="dapp">dapp.jsp</result>
+		</action>
 		
 		<action name="user_*" class="com.dyin.action.UserAction"
 			method="{1}">
@@ -27,16 +33,25 @@
 			<result name="succ">/view/dyin/video/list.jsp</result>
 		</action>
 		
-		
-		<action name="index" class="com.dyin.action.IndexAction"
-			method="index">
-			<result name="succ">dindex.jsp</result>
-		</action>
-		
+
 		<action name="umc_*" class = "com.dyin.action.UmcAction" method = "{1}">
 			<result name = "list">/view/dyin/umc/list.jsp</result>
 			<result name = "add">/view/dyin/umc/add.jsp</result>
+			<result name = "listAction" type = "redirectAction">umc_list.action</result>
 		</action>
+		
+		<action name="music_*" class="com.dyin.action.MusicAction" method = "{1}">
+			<result name = "list">/view/dyin/music/list.jsp</result>
+			<result name = "add">/view/dyin/music/add.jsp</result>
+			<result name = "listAction" type = "redirectAction">music_list.action</result>
+		</action>
+		
+		<action name="image_*" class="com.dyin.action.ImageAction" method = "{1}">
+			<result name = "list">/view/dyin/image/list.jsp</result>
+			<result name = "add">/view/dyin/image/add.jsp</result>
+			<result name = "listAction" type = "redirectAction">image_list.action?id=${id}</result>
+		</action>
+		
 
 	</package>
 

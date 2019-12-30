@@ -137,7 +137,7 @@ html, body { /* 仅适用于图片或视频占用一整屏*/
 			</div>
 			<div>机构认证</div>
 			<div>抖音MCN</div>
-			<div>抖音音乐人</div>
+			<div><a style = "color:white" href="index_dmusician.action">抖音音乐人</a></div>
 			<div>抖音特效师</div>
 			<div>视频上传</div>
 			<div>开放平台</div>

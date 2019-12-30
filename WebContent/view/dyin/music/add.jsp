@@ -22,7 +22,7 @@
 		var loading = null;
 		//上传图片
 		$('#upload-image').ajaxUploadPrompt({	//上传按钮调用ajaxUploadPrompt方法
-			url: '/dyin/umc_image.action',	//上传的地址
+			url: '/dyin/music_image.action',	//上传的地址
 			beforeSend: function () {	//上传之前
 				loading = layer.load();	//弹窗等待，转圈
 			},
@@ -32,26 +32,6 @@
 				}
 				$('#image').attr('src',data);
 				$('input[name="bean.image"]').val(data);
-			},
-			error: function () {		//上传失败
-				if (loading) {
-					layer.close(loading);	//关闭转圈
-				}
-				alert('上传失败');
-			}
-		});
-		//上传视频
-		$('#upload-video').ajaxUploadPrompt({	//上传按钮调用ajaxUploadPrompt方法
-			url: '/dyin/umc_video.action',	//上传的地址
-			beforeSend: function () {	//上传之前
-				loading = layer.load();	//弹窗等待，转圈
-			},
-			success: function (data) {	//上传成功
-				if (loading) {
-					layer.close(loading);	//关闭转圈
-				}
-				$('#video').attr('src',data);
-				$('input[name="bean.video"]').val(data);
 			},
 			error: function () {		//上传失败
 				if (loading) {
@@ -73,16 +53,16 @@
 		</ul>
 	</div>
 
-	<form action="umc_add.action" method="post" class="form-horizontal">
+	<form action="music_add.action" method="post" class="form-horizontal">
 		<h5 class="page-header alert-info"
 			style="padding: 10px; margin: 0px; margin-bottom: 5px;">基本信息</h5>
 		<div class="row">
 			<div class="col-sm-7">
 				<div class="form-group">
-					<label class="col-sm-3 control-label">标题</label>
+					<label class="col-sm-3 control-label">音乐</label>
 					<div class="col-sm-9">
-						<input type="text" name="bean.title" class="form-control input-sm"
-							placeholder="请输入标题" />
+						<input type="text" name="bean.music" class="form-control input-sm"
+							placeholder="请输入音乐" />
 					</div>
 				</div>
 			</div>
@@ -104,16 +84,6 @@
 					</div>
 				</div>
 				<img width="200" style="margin-left:200px" id = "image" src = ""></img>
-			</div>
-			<div class="col-sm-7">
-				<div class="form-group">
-					<label class="col-sm-3 control-label">短视频</label>
-					<div class="col-sm-9">
-						<input id = "upload-video" type = "button" class = "btn btn-success" value = "上传短视频" />
-						<input type = "hidden" name = "bean.video">
-					</div>
-				</div>
-				<video width="200" style="margin-left:200px" muted loop autoplay id = "video" src=""></video>
 			</div>
 		</div>
 				

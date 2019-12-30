@@ -17,15 +17,16 @@
 <body>
 	<div style="padding: 0px; margin: 0px;">
 		<ul class="breadcrumb" style="margin: 0px;">
-			<li><a href="#">你的音乐管理</a></li>
-			<li>查询音乐</li>
+			<li><a href="#">图片管理</a></li>
+			<li>查询图片</li>
 		</ul>
 	</div>
 	<form class="form-inline">
 		<div class="row alert alert-info" style="margin: 0px; padding: 3px;">
 
 			<div class="form-group">
-				<a class="btn btn-success" href="umc_add.action">添加音乐</a>
+				<!-- 此处id是music的id -->
+				<a class="btn btn-success" href="image_add.action?id=${id }">添加图片</a>
 			</div>
 
 		</div>
@@ -33,24 +34,19 @@
 			<table class="table  table-condensed table-striped">
 				<tr>
 					<th>编号</th>
-					<th>标题</th>
-					<th>作者</th>
 					<th>图片</th>
-					<th>短视频</th>
 					<th>操作</th>
 				</tr>
 				<c:forEach items = "${list }" var = "bean">
 					<tr>
 						<td>${bean.id }</td>
-						<td>${bean.title }</td>
-						<td>${bean.author }</td>
 						<td>
 							<a href="${bean.image }" target="_blank">${bean.image }</a>
 						</td>
-						<td>
-							<a href="${bean.video }" target="_blank">${bean.video }</a>
-						</td>
-						<th><a class="btn btn-xs btn-danger" href="umc_del?id=${bean.id }">删除</a></th>
+						<th>
+							
+							<a class="btn btn-xs btn-danger" href="image_del?id=${bean.id }&mid=${id }">删除</a>
+						</th>
 					</tr>
 				</c:forEach>
 

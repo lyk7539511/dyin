@@ -25,7 +25,7 @@
 		<div class="row alert alert-info" style="margin: 0px; padding: 3px;">
 
 			<div class="form-group">
-				<a class="btn btn-success" href="umc_add.action">添加音乐</a>
+				<a class="btn btn-success" href="music_add.action">添加音乐</a>
 			</div>
 
 		</div>
@@ -33,24 +33,23 @@
 			<table class="table  table-condensed table-striped">
 				<tr>
 					<th>编号</th>
-					<th>标题</th>
+					<th>音乐</th>
 					<th>作者</th>
 					<th>图片</th>
-					<th>短视频</th>
 					<th>操作</th>
 				</tr>
 				<c:forEach items = "${list }" var = "bean">
 					<tr>
 						<td>${bean.id }</td>
-						<td>${bean.title }</td>
+						<td>${bean.music }</td>
 						<td>${bean.author }</td>
 						<td>
 							<a href="${bean.image }" target="_blank">${bean.image }</a>
 						</td>
-						<td>
-							<a href="${bean.video }" target="_blank">${bean.video }</a>
-						</td>
-						<th><a class="btn btn-xs btn-danger" href="umc_del?id=${bean.id }">删除</a></th>
+						<th>
+							<a class="btn btn-xs btn-success" href="image_list?id=${bean.id }">图片</a>
+							<a class="btn btn-xs btn-danger" href="umc_del?id=${bean.id }">删除</a>
+						</th>
 					</tr>
 				</c:forEach>
 
