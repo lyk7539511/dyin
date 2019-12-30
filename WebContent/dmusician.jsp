@@ -137,8 +137,9 @@
         <div class="musician-music-marquee">
         	<c:forEach items="${musicList }" var="bean">
         		<div class="musician-music">
+        			<a class="btn btn-xs btn-danger" href="index_dapp.action?id=${bean.id }">
                 	<img class="musician-music-logo" width="180" height="180" src="${bean.image }"/>
-                	<span class="musician-music-name">${bean.music }</span>
+                	<span class="musician-music-name">${bean.music }</span></a>
             	</div>
         	</c:forEach>
 

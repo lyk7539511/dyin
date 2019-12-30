@@ -2,8 +2,10 @@ package com.dyin.action;
 
 import java.util.List;
 
+import com.dyin.bean.ImageBean;
 import com.dyin.bean.MusicBean;
 import com.dyin.bean.UmcBean;
+import com.dyin.dao.ImageDAO;
 import com.dyin.dao.MusicDAO;
 import com.dyin.dao.UmcDAO;
 import com.dyin.dao.VideoDAO;
@@ -16,7 +18,35 @@ public class IndexAction {
 	private List<UmcBean> umcList;
 	private List<MusicBean> musicList;
 	private int musicSize = 0;
+	private MusicBean musicBean;
+	private List<ImageBean> imageList;
+	private ImageDAO imageDAO = new ImageDAO();
+	private int id;
 	
+	public MusicBean getMusicBean() {
+		return musicBean;
+	}
+
+	public void setMusicBean(MusicBean musicBean) {
+		this.musicBean = musicBean;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public List<ImageBean> getImageList() {
+		return imageList;
+	}
+
+	public void setImageList(List<ImageBean> imageList) {
+		this.imageList = imageList;
+	}
+
 	public int getMusicSize() {
 		return musicSize;
 	}
@@ -91,7 +121,12 @@ public class IndexAction {
 		return "dmusician";
 	}
 	
+
 	public String dapp() {
+		musicBean = musicDAO.getMusicBean(id);
+		int mid = musicBean.getId();
+		imageList = imageDAO.getImageList(mid);
 		return "dapp";
 	}
+
 }

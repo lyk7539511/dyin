@@ -17,7 +17,7 @@
 			method="{1}">
 			<result name="dindex">dindex.jsp</result>
 			<result name="dmusician">dmusician.jsp</result>
-			<result name="dapp">dapp.jsp</result>
+			<result name = "dapp">dapp.jsp</result>
 		</action>
 		
 		<action name="user_*" class="com.dyin.action.UserAction"
@@ -44,6 +44,7 @@
 			<result name = "list">/view/dyin/music/list.jsp</result>
 			<result name = "add">/view/dyin/music/add.jsp</result>
 			<result name = "listAction" type = "redirectAction">music_list.action</result>
+			
 		</action>
 		
 		<action name="image_*" class="com.dyin.action.ImageAction" method = "{1}">

@@ -16,6 +16,23 @@ public class MusicDAO extends BaseDAO<MusicBean> {
 		return queryBySql(sqlString,new MysqlReflectMapping<MusicBean>(MusicBean.class));
 	}
 	
+	public MusicBean getMusicBean(int id) {
+		String sql = "select * from tbl_music where id=?";
+		List<MusicBean> musicBean = queryBySql(sql, new IParamBinding() {
+
+			@Override
+			public void bindParam(PreparedStatement pstmt) throws SQLException {
+				pstmt.setInt(1, id);
+			}
+		}, new MysqlReflectMapping<MusicBean>(MusicBean.class));
+
+		if (musicBean != null && !musicBean.isEmpty()) {
+			return musicBean.get(0);
+		}
+
+		return null;
+	}
+	
 	public void addMusic(MusicBean bean) {
 		
 		String sqlString = "insert into tbl_music(music,author,image) value(?,?,?)";

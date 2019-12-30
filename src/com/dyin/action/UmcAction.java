@@ -2,12 +2,14 @@ package com.dyin.action;
 
 import java.util.List;
 
+import com.dyin.bean.ImageBean;
 import com.dyin.bean.UmcBean;
+import com.dyin.dao.ImageDAO;
 import com.dyin.dao.UmcDAO;
 import com.dyin.util.FileUtil;
 
 public class UmcAction extends BaseAction {
-	private UmcDAO dao = new UmcDAO();
+	private UmcDAO umcDAO = new UmcDAO();
 	private List<UmcBean> list;
 	private UmcBean bean;
 
@@ -30,7 +32,7 @@ public class UmcAction extends BaseAction {
 	// 查询出来的结果送到页面
 	// localhost:8080/dyin/umc_list.action
 	public String list() {
-		list = dao.getUmcList();
+		list = umcDAO.getUmcList();
 		return "list";
 	}
 
@@ -44,7 +46,7 @@ public class UmcAction extends BaseAction {
 			}
 			
 			try {
-				dao.addUmc(bean);
+				umcDAO.addUmc(bean);
 			} catch (Exception e) {
 				jsAlert(bean.getTitle() + "已存在", "/dyin/umc_add");
 				return null;
@@ -61,7 +63,7 @@ public class UmcAction extends BaseAction {
 	//删除
 	// localhost:8080/dyin/umc_del.action
 	public String del() {
-		dao.delUmc(id);
+		umcDAO.delUmc(id);
 		return "listAction";
 		
 	}
