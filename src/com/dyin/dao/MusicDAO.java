@@ -16,7 +16,7 @@ public class MusicDAO extends BaseDAO<MusicBean> {
 		return queryBySql(sqlString,new MysqlReflectMapping<MusicBean>(MusicBean.class));
 	}
 	
-	public MusicBean getMusicBean(int id) {
+	public MusicBean getMusicBeanById(int id) {
 		String sql = "select * from tbl_music where id=?";
 		List<MusicBean> musicBean = queryBySql(sql, new IParamBinding() {
 
@@ -28,9 +28,9 @@ public class MusicDAO extends BaseDAO<MusicBean> {
 
 		if (musicBean != null && !musicBean.isEmpty()) {
 			return musicBean.get(0);
+		}else {
+			return null;
 		}
-
-		return null;
 	}
 	
 	public void addMusic(MusicBean bean) {

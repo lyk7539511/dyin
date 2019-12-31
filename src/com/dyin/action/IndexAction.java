@@ -10,7 +10,7 @@ import com.dyin.dao.MusicDAO;
 import com.dyin.dao.UmcDAO;
 import com.dyin.dao.VideoDAO;
 
-public class IndexAction {
+public class IndexAction extends BaseAction {
 	private String videoString;
 	private VideoDAO videoDAO = new VideoDAO();
 	private UmcDAO umcDao = new UmcDAO();
@@ -21,7 +21,6 @@ public class IndexAction {
 	private MusicBean musicBean;
 	private List<ImageBean> imageList;
 	private ImageDAO imageDAO = new ImageDAO();
-	private int id;
 	
 	public MusicBean getMusicBean() {
 		return musicBean;
@@ -29,14 +28,6 @@ public class IndexAction {
 
 	public void setMusicBean(MusicBean musicBean) {
 		this.musicBean = musicBean;
-	}
-	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public List<ImageBean> getImageList() {
@@ -123,9 +114,8 @@ public class IndexAction {
 	
 
 	public String dapp() {
-		musicBean = musicDAO.getMusicBean(id);
-		int mid = musicBean.getId();
-		imageList = imageDAO.getImageList(mid);
+		musicBean = musicDAO.getMusicBeanById(id);	//music的id
+		imageList = imageDAO.getImageList(id);	//获取对应music的图片列表，应该使用mid，id与mid值相同
 		return "dapp";
 	}
 
