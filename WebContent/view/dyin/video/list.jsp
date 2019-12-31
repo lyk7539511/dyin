@@ -57,6 +57,6 @@
 		</div>
 	</form>
 	
-	<video muted loop autoplay src="${video }"></video>
+	<video width=80% muted loop autoplay src="${video }"></video>
 </body>
 </html>

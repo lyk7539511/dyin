@@ -1,99 +1,99 @@
 * {
-    padding: 0;
-    margin: 0
+	padding: 0;
+	margin: 0
 }
 
-a{
+a {
 	color: black;
 	text-decoration: none;
 }
 
 /* 垂直居中 */
 .vertical-helper {
-    height: 100%;
-    display: inline-block;
-    *zoom: 1;
-    *display: inline;
-    vertical-align: middle;
+	height: 100%;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+	vertical-align: middle;
 }
 
 /*********************** index *****************************/
 .index-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 视频多余部分剪切掉*/
-    vertical-align: top; /* 修改基线影响*/
-    min-width: 1200px;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /* 视频多余部分剪切掉*/
+	vertical-align: top; /* 修改基线影响*/
+	min-width: 1200px;
 }
 
 .index-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 90px;
-    overflow: hidden;
-    min-width: 1200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 90px;
+	overflow: hidden;
+	min-width: 1200px;
 }
 
 .index-logo {
-    float: left;
-    margin-top: 20px;
-    margin-left: 80px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 80px;
 }
 
 .index-nav {
-    margin-right: 140px;
-    overflow: hidden; /*去除浮动影响*/
+	margin-right: 140px;
+	overflow: hidden; /*去除浮动影响*/
 }
 
 .index-nav div {
-    float: right;
-    color: white;
-    height: 90px;
-    line-height: 90px;
-    padding: 0 12px;
-    cursor: pointer;
+	float: right;
+	color: white;
+	height: 90px;
+	line-height: 90px;
+	padding: 0 12px;
+	cursor: pointer;
 }
 
 .index-footer {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    width: 100%;
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    min-width: 1200px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 5px;
+	width: 100%;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	min-width: 1200px;
 }
 
 .index-footer div {
-    line-height: 25px;
+	line-height: 25px;
 }
 
 .index-main {
-    position: absolute;
-    right: 0;
-    top: 40%;
-    left: 0;
-    text-align: right; /*对内部行级标签生效 */
-    min-width: 1200px;
+	position: absolute;
+	right: 0;
+	top: 40%;
+	left: 0;
+	text-align: right; /*对内部行级标签生效 */
+	min-width: 1200px;
 }
 
 .index-download {
-    margin-top: 50px;
+	margin-top: 50px;
 }
 
 .index-download img {
-    border-radius: 8px;
-    border: 1px solid black;
-    box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, .54);
+	border-radius: 8px;
+	border: 1px solid black;
+	box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, .54);
 }
 
 .index-app {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /*
@@ -101,585 +101,574 @@ a{
 opacity: 0.5;
 }
 */
-
 .index-menu {
-
-    display: none;
-    top: 65px;
-    background: white;
-    font-size: 14px;
-    padding: 10px 0;
-    border-radius: 5px;
-    margin-right: 190px;
-
+	display: none;
+	top: 65px;
+	background: white;
+	font-size: 14px;
+	padding: 10px 0;
+	border-radius: 5px;
+	margin-right: 190px;
 }
 
 .index-popup {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: right;
-    min-width: 1200px;
+	position: absolute;
+	top: 65px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: right;
+	min-width: 1200px;
 }
 
 .index-menu div {
-    height: 35px;
-    line-height: 35px;
-    padding: 0 20px;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px;
 }
 
 .index-menu div:hover {
-    background: lightgrey;
-    cursor: pointer;
+	background: lightgrey;
+	cursor: pointer;
 }
 
 .index-pointer {
-    display: inline-block; /* 让标签同时具有块级和行级标签功能*/
-    border-top: 5px solid white;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    margin-bottom: 3px;
-    margin-left: 3px;
+	display: inline-block; /* 让标签同时具有块级和行级标签功能*/
+	border-top: 5px solid white;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	margin-bottom: 3px;
+	margin-left: 3px;
 }
 
 .index-qrcode {
-    position: relative;
-    height: 50px;
-    width: 50px;
-    display: inline-block;
-
-
+	position: relative;
+	height: 50px;
+	width: 50px;
+	display: inline-block;
 }
 
 #qrcode-big {
-    position: absolute;
-    top: 0;
-    right: -2px;
-    /*初始大小为0*/
-    width: 0;
-    height: 0;
-    /*全透明*/
-    opacity: 0;
+	position: absolute;
+	top: 0;
+	right: -2px;
+	/*初始大小为0*/
+	width: 0;
+	height: 0;
+	/*全透明*/
+	opacity: 0;
 }
 
 /************************** musician ********************************/
-
 .musician-header {
-    height: 80px;
-    overflow: hidden;
-    position: fixed; /*相对于浏览器定位，保持header不动*/
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background: white;
-    z-index: 100; /*显示优先级*/
-    box-shadow: 2px 4px 20px rgba(34, 90, 89, .2);
+	height: 80px;
+	overflow: hidden;
+	position: fixed; /*相对于浏览器定位，保持header不动*/
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: white;
+	z-index: 100; /*显示优先级*/
+	box-shadow: 2px 4px 20px rgba(34, 90, 89, .2);
 }
 
 .musician-logo {
-    float: left;
-    margin-top: 15px;
-    margin-left: 25px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 25px;
 }
 
 .musician-nav div {
-    float: right;
-    height: 24px;
-    line-height: 24px;
-    font-size: 15px;
-    margin: 28px 15px 0 14px;
-    cursor: pointer;
-
+	float: right;
+	height: 24px;
+	line-height: 24px;
+	font-size: 15px;
+	margin: 28px 15px 0 14px;
+	cursor: pointer;
 }
 
 .musician-nav {
-    margin-right: 14px;
-    overflow: hidden;
-    font-family: Hei, serif;
+	margin-right: 14px;
+	overflow: hidden;
+	font-family: Hei, serif;
 }
 
 .musician-ad {
-    background-image: url("../image/banner.png");
-    height: 300px;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden; /*溢出隐藏*/
-
-    text-align: center; /*行级标签水平居中*/
-
-    margin-top: 80px;
-    min-width: 1200px;
+	background-image: url("../image/banner.png");
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden; /*溢出隐藏*/
+	text-align: center; /*行级标签水平居中*/
+	margin-top: 80px;
+	min-width: 1200px;
 }
 
 .musician-slogan {
-    font-size: 70px;
-    font-family: Hei, serif;
-    font-weight: bold;
-    margin-top: 50px;
+	font-size: 70px;
+	font-family: Hei, serif;
+	font-weight: bold;
+	margin-top: 50px;
 }
 
 .musician-join {
-    width: 164px;
-    height: 63px;
-    font-size: 20px;
-    font-family: Hei, serif;
-    line-height: 63px;
-    background: white;
-    display: inline-block; /*要块级标签具有行级标签的属性*/
-    border-radius: 4px;
-    margin-top: 40px;
-    cursor: pointer;
-    opacity: 1;
-    transition: all 0.3s ease-in-out 50ms;
+	width: 164px;
+	height: 63px;
+	font-size: 20px;
+	font-family: Hei, serif;
+	line-height: 63px;
+	background: white;
+	display: inline-block; /*要块级标签具有行级标签的属性*/
+	border-radius: 4px;
+	margin-top: 40px;
+	cursor: pointer;
+	opacity: 1;
+	transition: all 0.3s ease-in-out 50ms;
 }
 
 .musician-join:hover {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 
 .musician-listen {
-    font-size: 40px;
-    font-weight: bold;
-    font-family: Hei, serif;
-    text-align: center;
-    margin-top: 80px;
-    margin-bottom: 60px;
-    min-width: 1200px;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Hei, serif;
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 60px;
+	min-width: 1200px;
 }
 
 .musician-text {
-    text-align: center;
+	text-align: center;
 }
 
 .musician-join2 {
-    width: 164px;
-    height: 63px;
-    font-size: 20px;
-    font-family: Hei, serif;
-    line-height: 63px;
-    background: darksalmon;
-    border-radius: 4px;
-    margin-top: 40px;
-    cursor: pointer;
+	width: 164px;
+	height: 63px;
+	font-size: 20px;
+	font-family: Hei, serif;
+	line-height: 63px;
+	background: darksalmon;
+	border-radius: 4px;
+	margin-top: 40px;
+	cursor: pointer;
 }
 
 .musician-music {
-    position: relative;
-    width: 180px;
-    margin: 30px;
-    display: inline-block;
-    cursor: pointer;
+	position: relative;
+	width: 180px;
+	margin: 30px;
+	display: inline-block;
+	cursor: pointer;
 }
 
 .musician-music-name {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    font-size: 12px;
-    color: white;
-    width: 180px;
-    text-align: center;
-    font-family: serif, Hei;
-    transition: all 0.3s ease-in-out 50ms;
-    opacity: 0;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	font-size: 12px;
+	color: white;
+	width: 180px;
+	text-align: center;
+	font-family: serif, Hei;
+	transition: all 0.3s ease-in-out 50ms;
+	opacity: 0;
 }
 
 .musician-music-name-active {
-    transform: translate(0, 15px);
-    opacity: 1;
+	transform: translate(0, 15px);
+	opacity: 1;
 }
 
 .musician-music-logo {
-    vertical-align: top; /*解决因为行级标签基线产生的问题*/
-    border-radius: 6px;
-    box-shadow: 2px 4px 10px rgba(34, 90, 89, .2);
-    transition: all 0.3s ease-in-out 50ms; /*动画过渡：所有元素 动画执行时间 变速动画 鼠标悬停50ms执行*/
+	vertical-align: top; /*解决因为行级标签基线产生的问题*/
+	border-radius: 6px;
+	box-shadow: 2px 4px 10px rgba(34, 90, 89, .2);
+	transition: all 0.3s ease-in-out 50ms;
+	/*动画过渡：所有元素 动画执行时间 变速动画 鼠标悬停50ms执行*/
 }
 
 .musician-music-logo-active {
-    transform: scale(1.2);
+	transform: scale(1.2);
 }
 
 .musician-music-marquee {
-    width: 1800px;
-    margin-left: 120px;
+	width: 1800px;
+	margin-left: 120px;
 }
 
 .musician-music-container {
-    width: 100%;
-    overflow: hidden; /*溢出隐藏多余的图片*/
-    position: relative;
-    min-width: 1200px;
+	width: 100%;
+	overflow: hidden; /*溢出隐藏多余的图片*/
+	position: relative;
+	min-width: 1200px;
 }
 
 .left-pointer {
-    position: absolute;
-    left: 50px;
-    top: 300px;
-    cursor: pointer;
+	position: absolute;
+	left: 50px;
+	top: 300px;
+	cursor: pointer;
 }
 
 .right-pointer {
-    position: absolute;
-    right: 50px;
-    top: 300px;
-    transform: rotate(180deg);
-    cursor: pointer;
+	position: absolute;
+	right: 50px;
+	top: 300px;
+	transform: rotate(180deg);
+	cursor: pointer;
 }
 
 .musician-star {
-    width: 94px;
-    height: 94px;
-    border-radius: 47px;
-    overflow: hidden;
-    cursor: pointer;
+	width: 94px;
+	height: 94px;
+	border-radius: 47px;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 .musician-star img {
-    transition: all 0.3s ease-in-out 50ms;
+	transition: all 0.3s ease-in-out 50ms;
 }
 
 .musician-star img:hover {
-    transform: scale(1.4);
+	transform: scale(1.4);
 }
 
 .musician-people-name {
-    width: 94px;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 12px;
+	width: 94px;
+	text-align: center;
+	font-size: 12px;
+	margin-top: 12px;
 }
 
 .musician-people {
-    padding: 17px;
-    display: inline-block;
-
+	padding: 17px;
+	display: inline-block;
 }
 
 .musician-people-container {
-    text-align: center;
-    min-width: 1200px;
+	text-align: center;
+	min-width: 1200px;
 }
 
 .musician-song {
-    height: 62px;
-    overflow: hidden;
-    cursor: pointer;
-    text-align: left;
+	height: 62px;
+	overflow: hidden;
+	cursor: pointer;
+	text-align: left;
 }
 
 .musician-song img {
-    float: left;
-    margin-top: 10px;
-    margin-right: 15px;
-    margin-left: 10px;
-    border-radius: 4px;
+	float: left;
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 10px;
+	border-radius: 4px;
 }
 
 .musician-singer {
-    overflow: hidden; /*将剩余宽度填充满 （左侧区域定宽，右侧区域不确定）*/
-    font-size: 14px;
-    margin-top: 10px;
+	overflow: hidden; /*将剩余宽度填充满 （左侧区域定宽，右侧区域不确定）*/
+	font-size: 14px;
+	margin-top: 10px;
 }
 
 .musician-song-list {
-    padding-top: 10px;
-    width: 374px;
-    display: inline-block;
+	padding-top: 10px;
+	width: 374px;
+	display: inline-block;
 }
 
 .musician-song-container {
-    display: inline-block;
-    position: relative;
-    width: 760px;
-    height: 670px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 2px 4px 20px rgba(34, 90, 89, .2);
-    margin: 30px 0;
+	display: inline-block;
+	position: relative;
+	width: 760px;
+	height: 670px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 2px 4px 20px rgba(34, 90, 89, .2);
+	margin: 30px 0;
 }
 
 .musician-video {
-    width: 380px;
-    height: 670px;
-    object-fit: cover;
-    vertical-align: top;
+	width: 380px;
+	height: 670px;
+	object-fit: cover;
+	vertical-align: top;
 }
 
 .musician-player {
-    position: absolute;
-    top: 15px;
-    right: 320px;
-    cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 320px;
+	cursor: pointer;
 }
 
 .musician-start {
-    position: absolute;
-    top: 300px;
-    right: 150px;
+	position: absolute;
+	top: 300px;
+	right: 150px;
 }
 
 .musician-wrapper {
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 .musician-cloth {
-    width: 1200px;
-    display: inline-block;
-    text-align: right;
+	width: 1200px;
+	display: inline-block;
+	text-align: right;
 }
 
 /*************************** app *****************************************/
-
 .app-container {
-    margin: 0 auto; /*该居中方式必须为块级标签且定宽才有效*/
-    max-width: 750px;
-    width: 100%;
-    overflow: hidden;
+	margin: 0 auto; /*该居中方式必须为块级标签且定宽才有效*/
+	max-width: 750px;
+	width: 100%;
+	overflow: hidden;
 }
 
 .app-bg {
-    width: 104%;
-    vertical-align: top;
-    margin-top: -20%;
-    filter: blur(5px);
-    margin-left: -2%;
-
+	width: 104%;
+	vertical-align: top;
+	margin-top: -20%;
+	filter: blur(5px);
+	margin-left: -2%;
 }
 
 .app-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
 }
 
 .app-cloth {
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
-
+	max-width: 750px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .app-box {
-    position: relative;
-    width: 100%;
-    background: rgba(0, 0, 0, .6);
-
+	position: relative;
+	width: 100%;
+	background: rgba(0, 0, 0, .6);
 }
 
 .app-logo {
-    display: block;
-    width: 38%;
-    margin: 0 auto;
-    padding-top: 4%;
+	display: block;
+	width: 38%;
+	margin: 0 auto;
+	padding-top: 4%;
 }
 
 .app-cat {
-    position: absolute;
-    top: 9%;
-    left: 32.5%;
-    width: 31%;
+	position: absolute;
+	top: 9%;
+	left: 32.5%;
+	width: 31%;
 }
 
 .app-original {
-    position: absolute;
-    left: 32%;
-    top: 8%;
-    width: 11%;
+	position: absolute;
+	left: 32%;
+	top: 8%;
+	width: 11%;
 }
 
 .app-music {
-    font-size: .3rem;
-    color: white;
-    text-align: center;
-    margin-top: 30px;
+	font-size: .3rem;
+	color: white;
+	text-align: center;
+	margin-top: 30px;
 }
 
 .app-singer {
-    font-size: .26rem;
-    text-align: center;
-    margin-top: 20px;
+	font-size: .26rem;
+	text-align: center;
+	margin-top: 20px;
 }
 
 .app-number {
-    margin-top: 4px;
-    padding-bottom: 5%;
-    font-size: .26rem;
-    text-align: center;
-    color: #bdbec4;
+	margin-top: 4px;
+	padding-bottom: 5%;
+	font-size: .26rem;
+	text-align: center;
+	color: #bdbec4;
 }
 
 .app-flow {
-    font-size: 0;
-    background: #161823;
-    margin-bottom: 18%;
+	font-size: 0;
+	background: #161823;
+	margin-bottom: 18%;
 }
 
-.app-flow > div {
-    display: inline-block;
-    width: 33.33333333%;
+.app-flow>div {
+	display: inline-block;
+	width: 33.33333333%;
 }
 
-.app-flow > div > div {
-    padding-bottom: 1px;
-    padding-right: 1px;
+.app-flow>div>div {
+	padding-bottom: 1px;
+	padding-right: 1px;
 }
 
-.app-flow img {
-    width: 100%;
+.app-flow>div>div>div {
+	width: 100%;
+	background-position: center;
+	background: cover;
+	overflow: hidden;
+	height: 0;
+	padding-top: 150%;	/* 高是宽的150% */
+	background-repeat: no-repeat;
 }
 
 .app-footer {
-    position: fixed; /* 相对于滚动区域定位 */
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
+	position: fixed; /* 相对于滚动区域定位 */
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
 }
 
 .app-ad {
-    overflow: hidden; /*清除浮动 */
-    position: relative; /* 里面的元素要相对于ad定位 */
-    margin: 0 auto;
-    width: 100%;
-    max-width: 750px;
-    background: #0e0b17;
-
+	overflow: hidden; /*清除浮动 */
+	position: relative; /* 里面的元素要相对于ad定位 */
+	margin: 0 auto;
+	width: 100%;
+	max-width: 750px;
+	background: #0e0b17;
 }
 
 .app-ad-icon {
-    position: absolute;
-    left: 4%;
-    bottom: 0;
-    width: 45%;
-    margin-bottom: 1%;
+	position: absolute;
+	left: 4%;
+	bottom: 0;
+	width: 45%;
+	margin-bottom: 1%;
 }
 
 .app-btn {
-
-    font-size: .28rem;
-    float: right;
-    max-width: 750px;
-    background: red;
-    padding: 1.5% 4.5%;
-    margin: 3%;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
+	font-size: .28rem;
+	float: right;
+	max-width: 750px;
+	background: red;
+	padding: 1.5% 4.5%;
+	margin: 3%;
+	border-radius: 4px;
+	color: white;
+	cursor: pointer;
 }
 
 /************************** effect ***************************************/
 .art-header {
-    height: 80px;
-    width: 100%;
-    background: #161823;
-    min-width: 1200px;
+	height: 80px;
+	width: 100%;
+	background: #161823;
+	min-width: 1200px;
 }
 
 .art-logo {
-    width: 96px;
-    margin-top: 20px;
-    margin-left: 15%;
+	width: 96px;
+	margin-top: 20px;
+	margin-left: 15%;
 }
 
 .art-banner {
-    width: 100%;
-    min-width: 1200px;
+	width: 100%;
+	min-width: 1200px;
 }
 
 .art-container {
-    width: 316px;
-    height: 512px;
-    margin: 0 auto;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden; /* 视频溢出隐藏 */
+	width: 316px;
+	height: 512px;
+	margin: 0 auto;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden; /* 视频溢出隐藏 */
 }
 
 .art-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: top;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	vertical-align: top;
 }
 
 .art-layer {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
 
 .art-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    top: 350px;
-    text-align: center;
-    color: white;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: 350px;
+	text-align: center;
+	color: white;
 }
 
 /*************************** open *****************************************/
 .open-header {
-    height: 64px;
+	height: 64px;
 }
 
 .open-box {
-    width: 1200px;
-    height: 100%;
-    margin: 0 auto;
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
 }
 
 .open-logo {
-    width: 166px;
-    margin-top: 10px;
+	width: 166px;
+	margin-top: 10px;
 }
 
 .open-image {
-    float: right;
-    height: 100%;
-    width: 45%;
-    margin-right: 80px;
+	float: right;
+	height: 100%;
+	width: 45%;
+	margin-right: 80px;
 }
 
 .open-image img {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
 }
 
 .open-content {
-    overflow: hidden;
-    padding-left: 120px;
-    padding-top: 180px;
+	overflow: hidden;
+	padding-left: 120px;
+	padding-top: 180px;
 }
 
 .open-title {
-    font-size: 40px;
-    color: white;
+	font-size: 40px;
+	color: white;
 }
 
 .open-slogan {
-    font-size: 25px;
-    color: white;
-    margin-top: 25px;
+	font-size: 25px;
+	color: white;
+	margin-top: 25px;
 }
 
 .open-btn {
-    background: white;
+	background: white;
 }
 
 .open-right-btn {
-    background: transparent;
-    margin-left: 30px;
+	background: transparent;
+	margin-left: 30px;
 }

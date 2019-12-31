@@ -2,9 +2,7 @@ package com.dyin.action;
 
 import java.util.List;
 
-import com.dyin.bean.ImageBean;
 import com.dyin.bean.UmcBean;
-import com.dyin.dao.ImageDAO;
 import com.dyin.dao.UmcDAO;
 import com.dyin.util.FileUtil;
 

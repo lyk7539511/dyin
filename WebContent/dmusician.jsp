@@ -16,6 +16,8 @@
             var $leftpointer = $('.left-pointer');
             var $rightpointer = $('.right-pointer');
             var $marquee = $('.musician-music-marquee');
+            var musicSize = parseInt('${musicSize }');
+            $marquee.css('width',(1 + parseInt('${musicSize }'))*240 + 'px');
             $marquee.css('margin-left',distance + 'px');
             
             $leftpointer.on('click',function () {   //点击左按钮
@@ -27,7 +29,7 @@
                 }
             });
             $rightpointer.on('click',function () {  //点击右按钮
-            	var musicSize = parseInt('${musicSize }');
+            	
             	var windowWidth = $(window).width();
             	if(windowWidth <= 1200)
             		windowWidth = 1200;
@@ -150,30 +152,14 @@
 
     <div class="musician-people-container">
         <div class="musician-listen">抖音音乐人</div>
-        <div class="musician-people">
-            <div class="musician-star">
-                <img src="image/musician2.jpg" width="94" height="94"/>
-            </div>
-            <div class="musician-people-name">简弘亦</div>
-        </div>
-        <div class="musician-people">
-            <div class="musician-star">
-                <img src="image/musician3.jpg" width="94" height="94"/>
-            </div>
-            <div class="musician-people-name">徐秉龙</div>
-        </div>
-        <div class="musician-people">
-            <div class="musician-star">
-                <img src="image/musician4.jpg" width="94" height="94"/>
-            </div>
-            <div class="musician-people-name">摩登兄弟</div>
-        </div>
-        <div class="musician-people">
-            <div class="musician-star">
-                <img src="image/musician5.jpg" width="94" height="94"/>
-            </div>
-            <div class="musician-people-name">音阙诗听</div>
-        </div>
+        <c:forEach items="${starList }" var="bean">
+        	<div class="musician-people">
+            	<div class="musician-star">
+                	<img src="${bean.image }" width="94" height="94"/>
+            	</div>
+            	<div class="musician-people-name">${bean.name }</div>
+        	</div>
+        </c:forEach>        
     </div>
 
     <div class="musician-wrapper">

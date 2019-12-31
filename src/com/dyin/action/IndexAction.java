@@ -4,9 +4,11 @@ import java.util.List;
 
 import com.dyin.bean.ImageBean;
 import com.dyin.bean.MusicBean;
+import com.dyin.bean.StarBean;
 import com.dyin.bean.UmcBean;
 import com.dyin.dao.ImageDAO;
 import com.dyin.dao.MusicDAO;
+import com.dyin.dao.StarDAO;
 import com.dyin.dao.UmcDAO;
 import com.dyin.dao.VideoDAO;
 
@@ -21,7 +23,17 @@ public class IndexAction extends BaseAction {
 	private MusicBean musicBean;
 	private List<ImageBean> imageList;
 	private ImageDAO imageDAO = new ImageDAO();
-	
+	private List<StarBean> starList;
+	private StarDAO starDAO = new StarDAO();
+
+	public List<StarBean> getStarList() {
+		return starList;
+	}
+
+	public void setStarList(List<StarBean> starList) {
+		this.starList = starList;
+	}
+
 	public MusicBean getMusicBean() {
 		return musicBean;
 	}
@@ -101,21 +113,21 @@ public class IndexAction extends BaseAction {
 
 	public String dmusician() {
 		umcList = umcDao.getUmcList();
-		if (umcList!=null && !umcList.isEmpty()) {
+		if (umcList != null && !umcList.isEmpty()) {
 			videoString = umcList.get(0).getVideo();
 		}
 		musicList = musicDAO.getMusicList();
 		if (musicList != null) {
 			musicSize = musicList.size();
-			System.out.println();
 		}
+		starList = starDAO.getStarList();
+
 		return "dmusician";
 	}
-	
 
 	public String dapp() {
-		musicBean = musicDAO.getMusicBeanById(id);	//music的id
-		imageList = imageDAO.getImageList(id);	//获取对应music的图片列表，应该使用mid，id与mid值相同
+		musicBean = musicDAO.getMusicBeanById(id); // music的id
+		imageList = imageDAO.getImageList(id); // 获取对应music的图片列表，应该使用mid，id与mid值相同
 		return "dapp";
 	}
 

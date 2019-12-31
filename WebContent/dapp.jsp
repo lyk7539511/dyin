@@ -53,7 +53,7 @@ html, body {
 		<div class="app-cloth">
 
 			<div class="app-box">
-				<img class="app-logo" src="${musicBean.image }" /> <img
+				<img class="app-logo" src="image/music_cover.png" /> <img
 					class="app-cat" src="${musicBean.image }" /> <img
 					class="app-original" src="image/img_original.png">
 				<div class="app-music">${musicBean.music }</div>
@@ -68,7 +68,7 @@ html, body {
 				<c:forEach items="${imageList }" var="bean">
 					<div>
 						<div>
-							<img src="${bean.image }" />
+							<div style="background-image:url(${bean.image })"></div>
 						</div>
 					</div>
 				</c:forEach>

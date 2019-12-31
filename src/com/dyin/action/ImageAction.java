@@ -60,7 +60,7 @@ public class ImageAction extends BaseAction {
 	public String add() {
 		if (isPost()) {
 			if (ImageBean.isBlank(bean)) {
-				jsAlert("请完善信息", "/dyin/image_add");
+				jsAlert("请完善信息", "/dyin/image_add?id=" + bean.getMid());	//返回后带id返回
 				return null;
 			}
 			dao.addImage(bean);
